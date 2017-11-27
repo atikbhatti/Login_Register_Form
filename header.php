@@ -1,11 +1,9 @@
-<!DOCTYPE html>
 <?php 
 include('server.php');
 session_start();
-
 ?>
+<!DOCTYPE html>
 <html>
-
 <head>
 	<title>LOGIN/REGISTER</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -14,7 +12,6 @@ session_start();
 	<link rel="stylesheet" type="text/javascript" href="js/bootstrap.min.js">
 	<link rel="stylesheet" type="text/javascript" href="js/jquery.js">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
 <body>
 	<nav id="header" class="navbar navbar-fixed-top">
             <div id="header-container" class="container navbar-container">
@@ -32,10 +29,8 @@ session_start();
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
-
                         <?php 
-                           
-                            if(isset($_SESSION['login_user'])){
+                           if(isset($_SESSION['login_user'])){
                                 echo "<li><a href='logout.php'>Logout</a></li>";
                             }else{
                                 echo "<li><a href='login.php'>Login</a></li>

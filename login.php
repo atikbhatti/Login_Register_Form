@@ -1,28 +1,22 @@
 <?php include('header.php');
-
 $msg = "Login Please";
+
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $Password = $_POST['password'];
 
     $query = "SELECT username FROM users WHERE username = '$username' and password = '$password'";
-   
     $result = mysqli_query($conn,$query);
 
     if($result){
-
         $user = mysqli_fetch_row($result);
         $_SESSION['login_user'] = $user[0];
-
         header('Location: index.php');
     }else{
         $msg = "<script type='text/javascript'>alert('User Name Or Password Invalid!')</script>";
-    }
+         }
 }
-
-
 ?>
-
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>

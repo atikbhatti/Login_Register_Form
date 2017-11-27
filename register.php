@@ -53,13 +53,8 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn,$query);
         $msg = "Your Registration Is Success";
     }
-
 }      
-
-
-
 ?>
-
 <div class="container">
             <div class="row main">
                 <div class="panel-heading">
