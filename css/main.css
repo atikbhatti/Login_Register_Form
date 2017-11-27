@@ -1,0 +1,106 @@
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+    margin-top: 100px;
+}
+
+h4 { 
+ border:0 solid #fff; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+
+/*register css*/
+.main{
+    margin-top: 70px;
+}
+
+h1.title { 
+    font-size: 50px;
+    font-family: 'Passion One', cursive; 
+    font-weight: 400; 
+}
+
+hr{
+    width: 10%;
+    color: #fff;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+label{
+    margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+    background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+    margin-top: 5px;
+}
+
+.login-register{
+    font-size: 11px;
+    text-align: center;
+}
+
+
+
+.navbar-container{
+    background: #343A40;
+    width: 100%;
+
+}
+
+#main-navigation li a:hover{
+    background: none;
+    color: #fff;
+}
+#main-navigation li a {
+    color: #999C99;
+}
+#brand{
+    color: #fff;
+}
