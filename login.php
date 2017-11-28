@@ -1,20 +1,30 @@
-<?php include('header.php');
-$msg = "Login Please";
+<?php
+include(dirname(__FILE__).'/includes/core.php');
 
-if(isset($_POST['submit'])){
+$title = 'Login';
+include(dirname(__FILE__).'/includes/header.php');
+
+$msg = "Please Login";
+
+if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $Password = $_POST['password'];
-
-    $query = "SELECT username FROM users WHERE username = '$username' and password = '$password'";
+    $password = md5($_POST['password']);
+    
+    // Find user
+    $query = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
     $result = mysqli_query($conn,$query);
-
-    if($result){
+    
+    // User found
+    if ($result->num_rows > 0) {
         $user = mysqli_fetch_row($result);
         $_SESSION['login_user'] = $user[0];
+
+        // Redirect to homepage
         header('Location: index.php');
-    }else{
-        $msg = "<script type='text/javascript'>alert('User Name Or Password Invalid!')</script>";
-         }
+    } else {
+        // User not found
+        $msg = "<script type='text/javascript'>alert('Username Or Password Invalid!')</script>";
+    }
 }
 ?>
 <div class="container">
@@ -42,6 +52,9 @@ if(isset($_POST['submit'])){
                          <div class="form-group ">
                             <button type="submit" class="btn btn-primary btn-lg btn-block login-button" name="submit">Login</button>
                         </div>
+                        <div class="login-register">
+                            <a href="register.php">Register</a>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -51,4 +64,4 @@ if(isset($_POST['submit'])){
     </div>
 </div>
 
-<?php  include('footer.php');  ?>
+<?php  include(dirname(__FILE__).'/includes/footer.php');  ?>

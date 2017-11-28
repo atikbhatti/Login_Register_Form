@@ -1,6 +1,10 @@
 <?php 
+// Session start
 session_start();
 
-session_destroy(); 
+// Clear everything in session
+session_destroy();
+
+// Redirect back to home
 header("Location: index.php");
 ?>
