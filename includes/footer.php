@@ -1,6 +1,6 @@
 <div class="container-fluid footer-container">
 	<div id="footer">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
               <div class="col-md-4">
                 <center>

@@ -13,5 +13,5 @@ if($conn->connect_error) {
 }
 
 // Select Databse
-$select_db = mysqli_select_db($conn,$dbname) or die('Could not connect to databse');;
+$select_db = mysqli_select_db($conn, $db_name) or die('Could not connect to databse');
 ?>

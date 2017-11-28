@@ -54,9 +54,15 @@ if (isset($_POST['submit'])) {
             $msg = "Please Check Your Form Field";
     } else {
         $created_at = date('Y-m-d H:i:s');
+        
         $query = "INSERT INTO users (name,email,username,password, created_at) VALUES ('$name','$email','$username','$password','$created_at')";
-        $result = mysqli_query($conn,$query);
-        $msg = "Your Registration Is Success";
+        
+        $result = mysqli_query($conn, $query);
+        
+        $_SESSION['login_user'] = $username;
+
+        // Redirect to homepage
+        header('Location: index.php');
     }
 }      
 ?>
@@ -64,7 +70,7 @@ if (isset($_POST['submit'])) {
     <div class="row main">
         <div class="panel-heading">
            <div class="panel-title text-center">
-                <h1 class="title"><?php echo @$msg;  ?></h1>
+                <h1 class="title"><?php echo @$msg; ?></h1>
                 <hr />
             </div>
         </div> 
